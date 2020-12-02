@@ -1,0 +1,11 @@
+{
+  "posts": [{
+    "message": "message",
+    "updated_time": "time",
+    "id": "id"
+  },{
+    "message": "message2",
+    "updated_time": "Another time",
+    "id": "Another id"
+  }]
+}

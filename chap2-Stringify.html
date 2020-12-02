@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Display JSON Workplace Posts</title>
+   <div class="message"></div>
+
+   <div class="test"></div>
+<script type="text/javascript">
+ const message = document.querySelector('.message');
+ message.textContent = "Hello World";
+
+ const myObj = {
+   "first" : "Laurence",
+   "last" : "Svekis",
+   "age" : 40
+ };
+//from Object to a String
+const val = JSON.stringify(myObj);
+
+
+// and from String back into on object
+const myString = '{"first":"Laurence","last":"Svekis","age":40}';
+const val1 = JSON.parse(myString);
+console.log(val1);
+val1.age = 41;
+console.log(val1);
+
+const val2 = JSON.stringify(val1)
+console.log(val1)
+
+message.textContent = val;
+console.log(myObj);
+
+ //TODO: resume JSON training
+</script>
+ </head>
+ <body>
+ </body>
+</html>

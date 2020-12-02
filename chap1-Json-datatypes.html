@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Display JSON Workplace Posts</title>
+   <div class="message"></div>
+
+   <div class="test"></div>
+<script type="text/javascript">
+ const message = document.querySelector('.message');
+ message.textContent = "Hello World";
+ const myObj = {
+   "myStr" : "String",
+   "myNum" : 1000,
+   "my-inner-Obj" : {
+     "first" : "Laurence"
+   },
+   "myArr" :  ["hello", "World", 1],
+   "MyBoo" : true,
+   "MyNull" : null
+   };
+
+myObj.myStr= "New String";
+myObj["myStr"] = "Bracket Notation";
+
+console.log(myObj);
+
+ //TODO: resume JSON training
+</script>
+ </head>
+ <body>
+ </body>
+</html>

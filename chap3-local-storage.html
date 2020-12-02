@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Display JSON Workplace Posts</title>
+   <div class="message"></div>
+
+   <div class="test"></div>
+<script type="text/javascript">
+ const message = document.querySelector('.message');
+ message.textContent = "Hello World";
+
+ const myObj = {
+   "first" : "Laurence",
+   "last" : "Svekis",
+   "counter" : 0
+ };
+//from Object to a String
+const val = JSON.stringify(myObj);
+//localStorage.setItem("counter",val);
+
+//const val2 = localStorage.getItem("test");
+//console.log(val2);
+//const val3 = JSON.parse(val2);
+//console.log(val3);
+
+const val2 =  localStorage.getItem("counter");
+const val3 = JSON.parse(val2);
+val3.counter++;
+const val4 = JSON.stringify(val3);
+localStorage.setItem("counter", val4);
+
+//const mycounter = localStorage.getItem("counter");
+message.textContent =val3.counter;
+//mycounter++;
+//myObj.counter = mycounter;
+//localStorage.setItem("counter", mycounter);
+
+
+
+ //TODO: resume JSON training
+</script>
+ </head>
+ <body>
+ </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Display JSON Workplace Posts</title>
+    <div class="message"></div>
+
+<script type="text/javascript">
+ const message = document.querySelector('.message');
+ message.textContent = "";
+fetch("data.json")
+.then(response => response.json())
+.then(json => output2(json));
+
+function output2(argdata){
+  for (let val = 0;val<argdata.data.length;val++){
+    console.log(val);
+    message.textContent += `${argdata.data[val].message}`;
+  }
+
+}
+
+
+function output1(argdata){
+  console.log(argdata);
+  for (val in argdata.data) {
+    console.log(val)
+    message.textContent += `${argdata.data[val].message}`;
+  }
+
+}
+
+
+function output(argdata){
+  console.log(argdata);
+  argdata.data.forEach(val => {
+    console.log(val.message);
+    if (val.message !=='undefined') {
+        message.textContent += `${val.message} - <br>`;
+    }
+
+
+  })
+}
+
+</script>
+ </head>
+ <body>
+   <br>
+
+ </body>
+</html>

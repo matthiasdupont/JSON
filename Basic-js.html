@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Display JSON Workplace Posts</title>
+    <div class="message"></div>
+
+    <div class="test"></div>
+<script type="text/javascript">
+  const message = document.querySelector('.message');
+  message.textContent = "Hello World";
+  const myObj = {"name":"value","last":"Dupont"};
+  console.log(myObj);
+  message.textContent = myObj.name;
+  message.textContent = myObj["last"];
+
+  myObj["first Name"] = "Matthias";
+  myObj.firstName = "Vincent";
+  
+  console.log(myObj);
+
+  //TODO: resume JSON training
+</script>
+  </head>
+  <body>
+  </body>
+</html>

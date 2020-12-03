@@ -1,0 +1,18 @@
+{
+  "friends": [{
+    "first":"Laurence",
+    "last":"Svekis",
+    "counter":1440,
+    "skills": ["javascript","JSON","CSS","Ajax"]
+  }, {
+    "first":"Matthias",
+    "last":"Dupont",
+    "counter":32,
+    "skills": ["javascript","JSON"]
+  }, {
+    "first":"Kilian",
+    "last":"Mbappe",
+    "counter":14,
+    "skills": ["javascript","JSON","CSS", "html"]
+  }]
+}

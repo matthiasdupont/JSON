@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Users JSON</title>
+  </head>
+  <body>
+    <div></div>
+
+    <script type="text/javascript">
+      const output = document.querySelector('div');
+      fetch("posts.json")
+      .then(response => response.json())
+      .then(json => posts(json));
+
+
+      function posts(data) {
+        data.data.forEach(val => {
+          //console.log(val.message);
+          if (val.message !== undefined) {
+            let post_date = new Date(val.updated_time);
+            var day = post_date.getDate();
+            var month = post_date.getMonth();
+            month++;
+            var year = post_date.getFullYear();
+
+            //console.log(post_date.getFullYear());
+
+            output.innerHTML += `Date : `;
+            output.innerHTML += day + `/` + month + `/` + year + `</br>`;
+            output.innerHTML += `Message : `;
+            output.innerHTML += `${val.message} </br></br>`;
+          }
+
+
+        })
+  //      data.results.forEach(val => {
+    //      console.log(val);
+      //  })
+      }
+    </script>
+  </body>
+</html>
